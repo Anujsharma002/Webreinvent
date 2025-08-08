@@ -35,7 +35,7 @@ webreinvent/
 
 ## 🧑‍💻 How to Run (Step-by-Step)
 
-### 1. Backend Setup
+### 0. Setup Ollama locally with docker
 
 ```bash
 cd Backend
@@ -44,6 +44,23 @@ python -m venv .venv
 pip install -r requirements.txt
 uv run backend_api.py      # OR use watchfiles for hot-reload
 ```
+
+### 1. Backend Setup
+
+#### a.Pull Ollama Docker Image
+```bash
+    docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+```
+#### b.Go to Cmd or powershell and run after pulling image
+```bash
+    docker exec -it <process-id> bash 
+```
+#### c.Try to run mistral
+```bash
+    ollama run mistral
+```
+if it will not work download manually
+
 
 Backend will be available at:
 

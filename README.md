@@ -8,6 +8,9 @@ This is a full-stack AI-powered application that tracks WebReinvent’s Google s
 
 - **Frontend**: React 19 (Vite)
 - **Backend**: FastAPI (served using `uv`)
+- **crewai:** framework to automate multiagent workflows
+- **Ollama:** Mistral
+- **Serper.dev Google Search Api**
 - **Tools**:
 
   - `watchfiles` (auto-reload backend on changes)
@@ -78,7 +81,7 @@ In the `FrontEnd/package.json`, two scripts are defined:
 "dev": "concurrently \"npm run vite\" \"npm run backend\""
 ```
 
-or 
+or
 
 In the `FrontEnd/package.json`, two scripts are defined:
 
@@ -87,36 +90,74 @@ In the `FrontEnd/package.json`, two scripts are defined:
 "dev": "concurrently \"npm run vite\" \"npm run backend\""
 ```
 
-
-
 Use:
 
 ```bash
 npm run dev
+
 ```
 
----
+### **4. Set up Environment Variables**
 
-## ⚠️ Warnings You Might See
+Create a `.env` file in the root directory:
 
-- **PydanticDeprecationWarning**Replace:
+```env
+SERPER_API_KEY=your_serper_api_key
+```
 
-  ```python
-  Field(..., required=True)
-  ```
+## 🧩 Contributing
 
-  With:
+We welcome contributions that help improve this project!
 
-  ```python
-  Field(..., json_schema_extra={"required": True})
-  ```
-- **WebSocket Deprecation**
-  These can be safely ignored unless WebSockets are actively used.
+### How to Contribute
 
-## 📌 Submission Notes
+1. **Fork the Repository**Click the **Fork** button on the top-right corner of this repository.
+2. **Clone your Fork**
 
-- All components work in sync: React + FastAPI + WatchFiles
-- Project has been tested and verified on local setup using:
-  - Node.js v18+
-  - Python 3.10+
-  - Windows 11 (PowerShell)
+   ```bash
+   git clone https://github.com/your-username/webreinvent.git
+   cd webreinvent
+   ```
+3. **Create a Feature Branch**
+
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+4. **Make Your Changes**
+
+   - Follow the existing code style.
+   - Keep your changes focused and purposeful.
+   - Add comments where necessary.
+5. **Commit and Push**
+
+   ```bash
+   git add .
+   git commit -m "Add: your meaningful commit message"
+   git push origin feature/your-feature-name
+   ```
+6. **Open a Pull Request**
+   Go to your fork on GitHub and click **"Compare & pull request"**.
+   Write a clear description of what you changed and why.
+
+## 🙌 Acknowledgements
+
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [CrewAI](https://docs.crewai.io/)
+- [Serper.dev](https://serper.dev/) for Google Search API
+- Mistral model via Ollama (optional if local LLM inference is integrated)
+
+### 📌 Contribution Guidelines
+
+- Stick to **PEP8** standards for Python code.
+- Keep pull requests minimal and focused.
+- Update documentation if needed.
+- Test your changes locally before submitting.
+- Be respectful and constructive in code reviews.
+
+## ✨ Author
+
+**Anuj Sharma**
+🌍 Gwalior, India
+🔗 [LinkedIn](https://linkedin.com/in/anuj-sharma-24b550226)
+💻 [GitHub](https://github.com/Anujsharma002)
+📫 anuj.sharma.cs.02@gmail.com

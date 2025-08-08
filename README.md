@@ -57,7 +57,7 @@ if it will not work download manually
 cd Backend
 python -m venv .venv
 .venv\Scripts\activate     # On Mac/Linux: source .venv/bin/activate
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 uv run backend_api.py      # OR use watchfiles for hot-reload
 ```
 

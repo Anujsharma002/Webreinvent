@@ -37,16 +37,6 @@ webreinvent/
 
 ### 0. Setup Ollama locally with docker
 
-```bash
-cd Backend
-python -m venv .venv
-.venv\Scripts\activate     # On Mac/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-uv run backend_api.py      # OR use watchfiles for hot-reload
-```
-
-### 1. Backend Setup
-
 #### a.Pull Ollama Docker Image
 ```bash
     docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
@@ -61,6 +51,15 @@ uv run backend_api.py      # OR use watchfiles for hot-reload
 ```
 if it will not work download manually
 
+
+### 1. Backend Setup
+```bash
+cd Backend
+python -m venv .venv
+.venv\Scripts\activate     # On Mac/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+uv run backend_api.py      # OR use watchfiles for hot-reload
+```
 
 Backend will be available at:
 
